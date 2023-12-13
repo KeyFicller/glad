@@ -4,8 +4,8 @@ project "glad"
     staticruntime "on"
     
 
-    targetdir(g_workspaceDir .. "/bin/" .. g_outputDir .. "/%{prj.name}")
-    objdir(g_workspaceDir .. "/bin-int/" .. g_outputDir .. "/%{prj.name}")
+    targetdir(envir_work_space_directory .. "/bin/" .. envir_output_directory .. "/%{prj.name}")
+    objdir(envir_work_space_directory .. "/bin-int/" .. envir_output_directory .. "/%{prj.name}")
 
     defines {"_CRT_SECURE_NO_WARNINGS"}
 
@@ -13,7 +13,8 @@ project "glad"
     {
         "include/glad/glad.h",
         "include/KHR/khrplatform.h",
-        "src/glad.c"
+        "src/glad.c",
+        "premake5.lua"
     }
 
 	includedirs
